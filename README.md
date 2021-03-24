@@ -11,7 +11,12 @@ The idea in this program is to adopt a distributed memory viewpoint of the k-mea
 main.c is the main driver. The datasets used are US pollution data from 2016, which is available on umn cselab machine. Here, I only upload the very small datesets pollution_small.csv for testing. The auxil1.c contains a set of auxilliary functions, which includes the parallel dirstirbuted version of k-means algorithm.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+This is a demo of running
+```bash
+mpirun -np 8 -hostfile hostfile -map-by node  main.ex
+```
+on phiXX.cselabs.umn.edu clusters.
+![Demo](./img/demo.png)
 
 ## Code Examples
 To build the executable program main.ex, run:
