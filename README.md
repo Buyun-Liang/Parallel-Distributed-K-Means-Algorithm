@@ -24,7 +24,7 @@ mpirun [ -np X ] [ --hostfile <filename> ] <program>
 ```
 where X is the number of processors, and -hostfile is used for specifying host nodes. For example:
 ```bash
-mpirun -np 16 -hostfile hosts -map-by node  main.ex
+mpirun -np 16 -hostfile hostfile -map-by node  main.ex
 ```
 where X = 16, <filename> is hosts, and -map-by node will load balance the processes across the available nodes, numbering each process in a round-robin fashion.
 
