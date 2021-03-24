@@ -1,5 +1,5 @@
 # Parallel-distributed-K-means-algorithm
-The idea in this program is to adopt a distributed memory viewpoint of the k-means algorithm https://en.wikipedia.org/wiki/K-means_clustering
+The idea in this program is to adopt a distributed memory viewpoint of the k-means algorithm https://en.wikipedia.org/wiki/K-means_clustering.
 
 ## Table of contents
 * [General Information](#general-information)
@@ -8,7 +8,17 @@ The idea in this program is to adopt a distributed memory viewpoint of the k-mea
 * [Contact](#contact)
 
 ## General Information
-main.c is the main driver. The datasets used are US pollution data from 2016, which is available on umn cselab machine. Here, I only upload the very small datesets pollution_small.csv for testing. The auxil1.c contains a set of auxilliary functions, which includes the parallel dirstirbuted version of k-means algorithm.
+K-means clustering is an important unsupervised learning algorithm. However, the sequential k-means algorithm is inefficient to cluster the large real-world data. Thus I wrote the parallel distributed version of the K-means algorithm to decrease the wall time required.
+
+The algorithm has two important parts in each iteration after initialization: 1). Each process will perform local operations to obtain the the counter of clusters and summation of points of different clusters. MPI_All_Reduce was used to allow the communication between processors and add up the result. 2). Reset centroids using the result from 1) in root processor, and broadcast the new centroids to every processors.
+
+main.c is the main driver. 
+
+The datasets used are US pollution data from 2016, which is available on umn cselab machine. Here, I only upload the very small datesets pollution_small.csv for testing. 
+
+The auxil1.c contains a set of auxilliary functions, which includes the parallel dirstirbuted version of k-means algorithm. 
+
+The python script solver.py is used to check the accuracy of the program.
 
 ## Screenshots
 This is a demo running on phiXX.cselabs.umn.edu clusters.
