@@ -1,1 +1,0 @@
-# parallel-distributed-K-means-algorithm
