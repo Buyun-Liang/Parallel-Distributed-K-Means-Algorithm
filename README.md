@@ -2,14 +2,18 @@
 The idea in this program is to adopt a distributed memory viewpoint of the k-means algorithm https://en.wikipedia.org/wiki/K-means_clustering
 
 ## Table of contents
-* [General Information](#General Information)
+* [General Information](#general-information)
+* [Screenshots](#screenshots)
+* [Code Examples](#code-examples)
+* [Contact](#contact)
 
 ## General Information
+main.c is the main driver. The datasets used are US pollution data from 2016, which is available on umn cselab machine. Here, I only upload the very small datesets pollution_small.csv for testing. The auxil1.c contains a set of auxilliary functions, which includes the parallel dirstirbuted version of k-means algorithm.
 
-## Files Description
-main.c is the main driver. The datasets used are US pollution data from 2016, which is available on umn cselab machine. Here, I only upload the very small datesets pollution_small.csv for testing.  auxil1.c contains a set of auxilliary functions, which includes the parallel dirstirbuted version of k-means algorithm.
+## Screenshots
+![Example screenshot](./img/screenshot.png)
 
-## Setup
+## Code Examples
 To build the executable program main.ex, run:
 ```bash
 make
@@ -32,3 +36,5 @@ The output should be
 ```bash
 number of correct labels =  1021 / 1021
 ```
+## Contact
+Created by [liang664@umn.edu] - feel free to contact me if you have any questions!
