@@ -11,11 +11,10 @@ The idea in this program is to adopt a distributed memory viewpoint of the k-mea
 main.c is the main driver. The datasets used are US pollution data from 2016, which is available on umn cselab machine. Here, I only upload the very small datesets pollution_small.csv for testing. The auxil1.c contains a set of auxilliary functions, which includes the parallel dirstirbuted version of k-means algorithm.
 
 ## Screenshots
-This is a demo of running
+This is a demo running on phiXX.cselabs.umn.edu clusters.
 ```bash
 mpirun -np 8 -hostfile hostfile -map-by node  main.ex
 ```
-on phiXX.cselabs.umn.edu clusters.
 ![Demo](./img/demo.png)
 
 ## Code Examples
@@ -42,4 +41,4 @@ The output should be
 number of correct labels =  1021 / 1021
 ```
 ## Contact
-Created by [liang664@umn.edu] - feel free to contact me if you have any questions!
+Created by [liang664@umn.edu] (https://www.linkedin.com/in/buyun-liang/) - feel free to contact me if you have any questions!
