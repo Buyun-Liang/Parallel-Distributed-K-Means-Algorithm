@@ -4,6 +4,7 @@ The idea in this program is to adopt a distributed memory viewpoint of the k-mea
 ## Table of contents
 * [General Information](#general-information)
 * [Screenshots](#screenshots)
+* [File Description](#file-description)
 * [Code Examples](#code-examples)
 * [Contact](#contact)
 
@@ -12,6 +13,7 @@ K-means clustering is an important unsupervised learning algorithm. However, the
 
 The algorithm has two important parts in each iteration after initialization: 1). Each process will perform local operations to obtain the the counter of clusters and summation of points of different clusters. MPI_All_Reduce was used to allow the communication between processors and add up the result. 2). Reset centroids using the result from 1) in root processor, and broadcast the new centroids to every processors.
 
+## File Description
 main.c is the main driver. 
 
 The datasets used are US pollution data from 2016, which is available on umn cselab machine. Here, I only upload the very small datesets pollution_small.csv for testing. 
