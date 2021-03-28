@@ -53,4 +53,4 @@ The output should be
 number of correct labels =  1021 / 1021
 ```
 ## Contact
-Created by [liang664@umn.edu] (https://www.linkedin.com/in/buyun-liang/) - feel free to contact me if you have any questions!
+Created by Buyun Liang [liang664@umn.edu] (https://www.linkedin.com/in/buyun-liang/) - feel free to contact me if you have any questions!
